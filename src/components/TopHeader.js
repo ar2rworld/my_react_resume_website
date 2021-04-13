@@ -1,14 +1,11 @@
 import React from 'react'
 function TopHeader(props){
-  function setOpt(n){
-    console.log("opt : " + n)
-  }
   return(<div>
     <ul className="menuHeader">
-      <li onClick={setOpt(0)} className='menuOption'>home</li>
-      <li className='menuOption'>about</li>
-      <li className='menuOption'>contact</li>
-      <li className='menuOption'>other</li>
+      <li onClick={()=>props.setOpt(0)} className='menuOption'>main</li>
+      <li onClick={()=>props.setOpt(1)} className='menuOption'>about</li>
+      <li onClick={()=>props.setOpt(2)} className='menuOption'>contact</li>
+      <li onClick={()=>props.setOpt(3)} className='menuOption'>other</li>
     </ul>
     <br/>
     <br/>
