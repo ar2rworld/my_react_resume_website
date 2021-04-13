@@ -1,0 +1,26 @@
+*{
+  font-family: 'Source Code Pro', monospace;
+  background-color: rgb(17, 14, 66);
+  color: aliceblue;
+}
+.menuOption{
+  font-size: 15px;
+  
+  display: block;
+  float: left;
+  padding:1%;
+  margin:1%;
+}
+.menuHeader{
+  top:0px;
+  background-color: rgb(43, 59, 145);
+  position: fixed;
+  width: 90%;
+  height: 30px;
+  list-style-type: none;
+  align-items: center;
+}
+.Main{
+  background-color: aqua;
+  display: inline;
+}
