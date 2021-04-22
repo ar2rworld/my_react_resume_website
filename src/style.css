@@ -1,24 +1,34 @@
 *{
   font-family: 'Source Code Pro', monospace;
-  background-color: rgb(17, 14, 66);
-  color: aliceblue;
+  background-color: rgba(204,0,0,96);
+  color: rgb(255, 240, 240);
+}
+.yellow{
+  color:rgba(255,215,0,120);
+}
+.red{
+  color: rgb(255, 240, 240);
 }
 .menuOption{
   font-size: 15px;
-  
   display: block;
   float: left;
-  padding:1%;
-  margin:1%;
+  margin: 0 5.5%;
+  padding: 10px 5%;
+  background-color:rgb(133, 62, 62);
+}
+.main{
+  padding: 5px 10px;
 }
 .menuHeader{
   top:0px;
   background-color: rgb(43, 59, 145);
   position: fixed;
-  width: 90%;
-  height: 30px;
+  width: 100%;
+  height: 50px;
+  padding:0;
+  margin: 0;
   list-style-type: none;
-  align-items: center;
 }
 .Main{
   background-color: aqua;
