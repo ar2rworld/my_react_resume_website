@@ -9,28 +9,66 @@
 .red{
   color: rgb(255, 240, 240);
 }
+#flagUserForm{
+  left:50%;
+  top:60px;
+  z-index: 1;
+}
+#flagBTN{
+  float: right;
+  margin-right: 0;
+  margin-left: auto;
+}
 .menuOption{
-  font-size: 15px;
-  display: block;
-  float: left;
-  margin: 0 5.5%;
-  padding: 10px 5%;
-  background-color:rgb(133, 62, 62);
+  z-index:2;
+  background-color:#fff;
+  font-size: 24px;
+  font-weight: bold;
+  /*display: -ms-inline-grid;*/
+  /*float: left;*/
+  margin: auto;
+  padding: 10px;
+}
+.menuHeader{
+  z-index:2;
+  top:0px;
+  background-color:#0039A6;
+  position: fixed;
+  width: 100%;
+  /*height: 50px;*/
+  /*padding:auto;*/
+  /*margin: auto;*/
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(5, auto) ;
+  /*grid-template-rows: auto;*/
 }
 .main{
   padding: 5px 10px;
 }
-.menuHeader{
-  top:0px;
-  background-color: rgb(43, 59, 145);
-  position: fixed;
-  width: 100%;
-  height: 50px;
-  padding:0;
-  margin: 0;
-  list-style-type: none;
+.whiteColor{
+  color:#fff;
+}
+.blueColor{
+  color:#0039A6;
+}
+.redColor{
+  color:#d52b1e;
+}
+.whiteBColor{
+  background-color:#fff;
+}
+.blueBColor{
+  background-color:#0039A6;
+}
+.redBColor{
+  background-color:#d52b1e;
 }
 .Main{
   background-color: aqua;
   display: inline;
+}
+.imageWrap{
+  position:relative;
+  overflow:hidden;
 }

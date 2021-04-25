@@ -4,6 +4,7 @@ import Main from './components/Main'
 import About from './components/About'
 import Contact from './components/Contact'
 import Other from './components/Other'
+import UserForm from './components/UserForm'
 import './style.css'
 import $ from 'jquery'
 class App extends React.Component{
@@ -44,10 +45,14 @@ class App extends React.Component{
   }
   flagDisplay =()=>{
     $("#flagBTN").click(()=>{
-      if(this.state.flagIsVisible===false)
-        $("#flagImg").animate({opacity:1}, 1000, ()=>{console.log("done")})
-      else
-      $("#flagImg").animate({opacity:0}, 1000, ()=>{console.log("done")})
+
+      if(this.state.flagIsVisible===false){
+        
+        $("#flagUserForm").animate({opacity:1}, 1000, ()=>{console.log("done")})
+        $("#flagUserForm").css("display", "")
+      }else{
+        $("#flagUserForm").animate({opacity:0}, 1000, ()=>{$("#flagUserForm").css("display", "none")})
+      }
       this.setState({flagIsVisible:!this.state.flagIsVisible})
     });
   }
@@ -56,9 +61,7 @@ class App extends React.Component{
       <link rel="preconnect" href="https://fonts.gstatic.com"/>
       <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet"/> 
       <br/><br/>
-      <img id="flagImg" src="https://cdn.britannica.com/36/22536-004-9855C103/Flag-Union-of-Soviet-Socialist-Republics.jpg"
-        style={{position:'fixed', left:window.length/2, opacity:0}}
-      />
+      <UserForm />
       <TopHeader selectedOpt={this.state.opt} getOpt={this.getOpt} setOpt={this.setOpt} />
       {this.getMain()}
     </div>)

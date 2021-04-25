@@ -16,13 +16,13 @@ class MenuOption extends Component{
   }
   render(props){
     return(
-        <li className={this.state.className}
+        <div className={this.state.className}
         style={{color:(this.state.getOpt() == this.state.opt?"#00ffaa":"#000")}}
         onClick={()=>{
           this.state.setOpt(this.state.opt);
           console.log(this.state.selectedOpt);
           this.style=(this.state.selectedOpt == this.state.opt?"#00ffaa":"#000");
-        }}>{this.state.name}</li>
+        }}>{this.state.name}</div>
     )
   }
 }
