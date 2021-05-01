@@ -1,0 +1,15 @@
+(node:25971) Warning: To load an ES module, set "type": "module" in the package.json or use the .mjs extension.
+(Use `node --trace-warnings ...` to show where the warning was created)
+/home/ec2-user/reactjs/my_react_resume_website/src/App.js:2
+import React from 'react'
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at Object.compileFunction (node:vm:355:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1022:15)
+    at Module._compile (node:internal/modules/cjs/loader:1056:27)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1121:10)
+    at Module.load (node:internal/modules/cjs/loader:972:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:813:14)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)
+    at node:internal/main/run_main_module:17:47

@@ -17,7 +17,7 @@ class Product extends Component{
       <img src={this.state.url} style={{display:"block",margin:"auto", width:this.state.width, height:this.state.height}} alt={this.state.alt}/>
       <h4>{this.state.name}</h4>
       <h5>{this.state.description}</h5>
-      <h4 className="yellow" style={{fontStyle:"italic", textAlign:"right"}}>₽{this.state.price?this.state.price:"Free for comrads"}</h4>
+      <h4 className="yellow" style={{fontStyle:"italic", textAlign:"right"}}>₽{this.state.price!=="0"?this.state.price:"Free for comrads"}</h4>
     </div>
   )}
 }

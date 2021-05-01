@@ -1,3 +1,4 @@
+//NODE_ENV=production node_modules/react-scripts/bin/react-scripts.js start
 import React from 'react'
 import TopHeader from './components/TopHeader'
 import Main from './components/Main'
@@ -10,7 +11,9 @@ import $ from 'jquery'
 class App extends React.Component{
   constructor(){
     super()
-    this.state={opt:0, flagIsVisible:false}
+    this.state={opt:0, flagIsVisible:false,
+      project:[]
+    }
     this.getMain=this.getMain.bind(this)
     this.setOpt=this.setOpt.bind(this)
     this.getOpt=this.getOpt.bind(this)
@@ -19,7 +22,7 @@ class App extends React.Component{
     let main;
     switch(Number(this.state.opt)){
       case 0:
-        main=<Main />
+        main=<Main project={this.state.project} />
       break;
       case 1:
         main=<About />
@@ -40,8 +43,18 @@ class App extends React.Component{
     //console.log("n:" +n)
     this.setState({opt:n})
   }
-  componentDidMount(){
+  async componentDidMount(){
     this.flagDisplay()
+    /*try {
+      const res = await fetch('http://localhost:8000/project/'); // fetching the data from api, before the page loaded
+      const project = await res.json();
+      //console.log("this" + project);
+      this.setState({
+        project
+      });
+    } catch (e) {
+      console.log("ERROR: " + e);
+    }*/
   }
   flagDisplay =()=>{
     $("#flagBTN").click(()=>{

@@ -1,9 +1,10 @@
 import React, {Component} from 'react'
 import Shop from "./Shop"
 class Main extends Component{
-  constructor(){
+  constructor(props){
     super()
-    this.state={isSelected:false}
+    this.state={isSelected:false,
+    project:props.project}
   }
   render(props){
     return(<div className="Main">
