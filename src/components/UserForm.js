@@ -6,7 +6,7 @@ class UserForm extends Component{
   }
   render(props){return(
     <div id="flagUserForm" style={{
-      position:'fixed', left:"50%",display:"none", opacity:0,
+      position:'fixed', left:"50%",display:"none", opacity:0, zIndex:50,
       //backgroundImage:'url("https://cdn.britannica.com/36/22536-004-9855C103/Flag-Union-of-Soviet-Socialist-Republics.jpg")'
     }}>
       <div style={{position:"relative"}}>

@@ -1,7 +1,13 @@
 *{
   font-family: 'Source Code Pro', monospace;
-  background-color: rgba(204,0,0,96);
+  /*background-color: rgba(204,0,0,96);*/
   color: rgb(255, 240, 240);
+}
+#root{
+  background-image: url("https://getwallpapers.com/wallpaper/full/8/b/9/1091826-new-soviet-union-wallpaper-2560x1440-images.jpg");
+  min-height:1000px;
+  
+  background-position: center top;
 }
 .yellow{
   color:rgba(255,215,0,120);
@@ -30,7 +36,7 @@
   padding: 10px;
 }
 .menuHeader{
-  z-index:2;
+  z-index:100;
   top:0px;
   background-color:#0039A6;
   position: fixed;
@@ -63,6 +69,18 @@
 }
 .redBColor{
   background-color:#d52b1e;
+  opacity: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  z-index:-1;
+}
+.Product{
+  z-index:1;
+  overflow: hidden;
+  position: relative;
 }
 .Main{
   background-color: aqua;
@@ -72,3 +90,6 @@
   position:relative;
   overflow:hidden;
 }
+/*
+-https://www.digitalocean.com/community/tutorials/how-to-change-a-css-background-images-opacity
+*/

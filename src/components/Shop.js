@@ -25,7 +25,7 @@ class Shop extends Component{
     <h3 style={{textAlign:"center"}}>Shop:</h3>
     <div style={{display:"grid", gridTemplateColumns:"auto auto"}}>
       {this.state.project.map(product=>{
-        return(<Product name={product.name} price={product.price} description={product.description} url={product.url} />)
+        return(<Product key={product.id} name={product.name} price={product.price} description={product.description} url={product.url} />)
       })}
       {/*<Product name="PPSh" price="500" description="one of the most dangerous russian gun in WW2" url="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.deactivated-guns.co.uk%2Fimages%2Fuploads%2Fppsh41china%2F0a1a1a141pp-036951_3.jpg&f=1&nofb=1" />
       <Product name="Molotov cocktail" price="1" description="When you left with nothing and ready to die for the MotherRussia" url="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.xl.thumbs.canstockphoto.com%2Fglass-bottle-filled-with-gasoline-a-so-called-molotov-cocktail-isolated-on-white-background-picture_csp24335112.jpg&f=1&nofb=1" />

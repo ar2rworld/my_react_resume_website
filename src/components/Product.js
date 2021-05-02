@@ -14,6 +14,7 @@ class Product extends Component{
   }
   render(){return(
     <div className="Product" style={{padding:"10px", border:"2px red solid", width:"auto", margin:"5px"}}>
+      <div className="redBColor" style={{width:"100%", height:"100%", opacity:"0.5"}}></div>
       <img src={this.state.url} style={{display:"block",margin:"auto", width:this.state.width, height:this.state.height}} alt={this.state.alt}/>
       <h4>{this.state.name}</h4>
       <h5>{this.state.description}</h5>
