@@ -1,4 +1,5 @@
 import React, {Component} from "react"
+import $ from "jquery"
 
 class Product extends Component{
   constructor(props){
@@ -11,6 +12,28 @@ class Product extends Component{
     description:(props.description?props.description:"Another russian toy"),
     price:(props.price?props.price:0)
     }
+  }
+  componentDidMount(){
+    this.addEffect()
+  }
+  addEffect=()=>{
+    $('.Product').mouseenter((obj)=>{
+      obj.currentTarget.childNodes.forEach(c=>{if(c.className==="redBColor"){
+        $(c).animate({opacity:1}, 100);
+      }})
+    })
+    $('.Product').mouseleave((obj)=>{
+      obj.currentTarget.childNodes.forEach(c=>{if(c.className==="redBColor"){
+        $(c).animate({opacity:0.6}, 100)
+      }})
+    })
+    /*$(".redBColor").mouseenter((obj)=>{
+      //console.log(obj)
+      $(obj.currentTarget).animate({opacity:1}, 100)
+    })
+    $('.redBColor').mouseleave((obj)=>{
+      $(obj.currentTarget).animate({opacity:0.6}, 100)
+    })*/
   }
   render(){return(
     <div className="Product" style={{padding:"10px", border:"2px red solid", width:"auto", margin:"5px"}}>

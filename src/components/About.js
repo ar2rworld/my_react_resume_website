@@ -6,6 +6,7 @@ function About(){
     <ul>
       <li>Reactjs</li>
       <li>jQuery</li>
+      <li>Django rest_framework</li>
     </ul>
     {/*<div style={{width:"100px", height:"100px", backgroundColor:"grey"}}></div>*/}
     <h3 style={{textAlign:"center"}}>Some more history:</h3>

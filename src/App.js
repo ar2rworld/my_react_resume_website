@@ -43,9 +43,9 @@ class App extends React.Component{
     //console.log("n:" +n)
     this.setState({opt:n})
   }
-  async componentDidMount(){
+  componentDidMount(){//async
+    console.log()
     this.flagDisplay()
-    this.animateProduct()
     /*try {
       const res = await fetch('http://localhost:8000/project/'); // fetching the data from api, before the page loaded
       const project = await res.json();
@@ -62,7 +62,7 @@ class App extends React.Component{
 
       if(this.state.flagIsVisible===false){
         
-        $("#flagUserForm").animate({opacity:1}, 1000, ()=>{console.log("done")})
+        $("#flagUserForm").animate({opacity:1}, 1000, ()=>{})
         $("#flagUserForm").css("display", "")
       }else{
         $("#flagUserForm").animate({opacity:0}, 1000, ()=>{$("#flagUserForm").css("display", "none")})
@@ -70,16 +70,6 @@ class App extends React.Component{
       this.setState({flagIsVisible:!this.state.flagIsVisible})
     });
   }
-  animateProduct=()=>{
-    $("#flagUserForm").mouseenter(()=>{
-      console.log("entered button");
-    })
-    $(".Product").mouseenter(()=>{
-      console.log("mousseover()");
-      $(".redBColor").animate({opacity:1}, 1000, ()=>{console.log("mouseover() animate done")});
-    });
-  }
-
   render(){
     return (<div>
       <link rel="preconnect" href="https://fonts.gstatic.com"/>
