@@ -14,7 +14,7 @@ class Shop extends Component{
     while(i<10){
       try {
         this.setState({project:[{key:1000, name:"Loading name", url:"https://media1.giphy.com/media/sSgvbe1m3n93G/giphy.gif?cid=790b7611552fe52e26c90b6b75e5aaa19589e7b65166ef6d&rid=giphy.gif&ct=g"}]})
-        const res = await fetch('http://localhost:8000/project/'); // fetching the data from api, before the page loaded
+        const res = await fetch('http://ec2-3-141-45-250.us-east-2.compute.amazonaws.com:8000/project/'); // fetching the data from api, before the page loaded
         const project = await res.json();
         this.setState({
           project, projectFetched:true
