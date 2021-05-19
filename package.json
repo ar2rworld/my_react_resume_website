@@ -4,12 +4,14 @@
   "main": "./App.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "NODE_ENV=production node_modules/react-scripts/bin/react-scripts.js start"
+    "startForUbuntu": "NODE_ENV=production node_modules/react-scripts/bin/react-scripts.js start",
+    "start": "cross-env NODE_ENV=development node_modules/react-scripts/bin/react-scripts.js start"
   },
   "author": "Artur Linnik",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "cross-env": "^7.0.3",
     "jquery": "^3.6.0",
     "npm": "^7.11.1",
     "react": "^17.0.2",

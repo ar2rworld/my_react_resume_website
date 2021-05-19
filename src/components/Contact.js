@@ -1,7 +1,9 @@
 import React from 'react'
 import ContactForm from './ContactForm'
+import SubscribeForm from './SubscribeForm'
 function Contact(){
   return(<div>
+    <SubscribeForm />
     <h2>Some ways to contact me:</h2>
     <ul>
       <li>Personal email: ar2r.world[at]gmail[dot]com</li>

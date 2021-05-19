@@ -96,3 +96,9 @@
 .PostTitle{
   text-align: center;
 }
+input{
+  background-color: rgb(153, 31, 31);
+}
+button{
+  background-color: red;
+}
