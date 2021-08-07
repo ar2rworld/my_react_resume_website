@@ -21,7 +21,7 @@ class Shop extends Component{
         });
         console.log("projects: " + project.length);
         done=true;
-        i=10;
+        break;
       } catch (e) {
         console.log("ERROR: " + e);
       }

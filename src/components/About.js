@@ -8,7 +8,6 @@ function About(){
       <li>jQuery</li>
       <li>Django rest_framework</li>
     </ul>
-    {/*<div style={{width:"100px", height:"100px", backgroundColor:"grey"}}></div>*/}
     <h3 style={{textAlign:"center"}}>Some more history:</h3>
     <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimages.huffingtonpost.com%2F2015-01-06-Berlin1945_USSRflag.jpg&f=1&nofb=1"
       style={{margin:"auto", display:"block", width:"60%"}}

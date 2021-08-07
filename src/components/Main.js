@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 import Shop from "./Shop"
+import { ProductsList } from '../features/shop/ProductsList'
+
 class Main extends Component{
   constructor(props){
     super()
@@ -21,7 +23,7 @@ class Main extends Component{
             </p>
           </div>
         </p>
-        <Shop />
+        <ProductsList />
       </div>
 
 

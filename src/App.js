@@ -7,17 +7,22 @@ import Contact from './components/Contact'
 import Other from './components/Other'
 import UserForm from './components/UserForm'
 import './style.css'
+
 import $ from 'jquery'
+import {useSelector, useDispatch} from 'react-redux'
+
 class App extends React.Component{
-  constructor(){
+  constructor(props){
     super()
     this.state={opt:0, flagIsVisible:false,
-      project:[]
+      project:[],
+      store : props.store
     }
     this.getMain=this.getMain.bind(this)
     this.setOpt=this.setOpt.bind(this)
     this.getOpt=this.getOpt.bind(this)
   }
+
   getMain(){
     let main;
     switch(Number(this.state.opt)){
@@ -44,7 +49,6 @@ class App extends React.Component{
     this.setState({opt:n})
   }
   componentDidMount(){//async
-    console.log()
     this.flagDisplay()
     /*try {
       const res = await fetch('http://localhost:8000/project/'); // fetching the data from api, before the page loaded
@@ -76,6 +80,7 @@ class App extends React.Component{
   }
 
   render(){
+    
     return (<div>
       <link rel="preconnect" href="https://fonts.gstatic.com"/>
       <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet"/> 
