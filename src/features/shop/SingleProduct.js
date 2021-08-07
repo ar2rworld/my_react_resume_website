@@ -1,11 +1,27 @@
 import { useSelector } from 'react-redux'
-import React from 'react'
-
+import React, { useEffect } from 'react'
+import $ from 'jquery'
 import { selectProductById } from './productsSlice'
 
 export const SingleProduct = ({ match }) => {
   const { id } = match
   const product = useSelector(state => selectProductById(state, id))
+
+  const addEffect=()=>{
+    $('.Product').mouseenter((obj)=>{
+      obj.currentTarget.childNodes.forEach(c=>{if(c.className==="redBColor"){
+        $(c).animate({opacity:1}, 100);
+      }})
+    })
+    $('.Product').mouseleave((obj)=>{
+      obj.currentTarget.childNodes.forEach(c=>{if(c.className==="redBColor"){
+        $(c).animate({opacity:0.6}, 100)
+      }})
+    })
+  }
+  useEffect(()=>{
+    addEffect()
+  })
 
   return(
     <div className="Product" style={{padding:"10px", border:"2px red solid", width:"auto", margin:"5px"}}>

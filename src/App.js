@@ -72,10 +72,7 @@ class App extends React.Component{
         $("#flagUserForm").animate({opacity:0}, 1000, ()=>{$("#flagUserForm").css("display", "none")})
       }
       this.setState({flagIsVisible:!this.state.flagIsVisible})
-      $(".Product").mouseenter(()=>{
-        console.log("mousseover()");
-        $(".redBColor").animate({opacity:1}, 1000, ()=>{console.log("mouseover() animate done")});
-      });
+      
     });
   }
 
