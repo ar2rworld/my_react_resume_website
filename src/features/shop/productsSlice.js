@@ -1,5 +1,5 @@
 import { createSlice, nanoid, createAsyncThunk } from '@reduxjs/toolkit'
-import { get } from '../../api/client'
+import { get }  from '../../api/client'
 
 const ProductInitialState = {
   name : "shop",

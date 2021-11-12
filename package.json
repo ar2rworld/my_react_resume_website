@@ -2,10 +2,12 @@
   "name": "my_react_resume_website",
   "version": "1.0.0",
   "main": "./App.js",
+  "homepage": "/my_react_resume_website",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "startForUbuntu": "NODE_ENV=production node_modules/react-scripts/bin/react-scripts.js start",
-    "start": "cross-env NODE_ENV=development node_modules/react-scripts/bin/react-scripts.js start"
+    "start": "cross-env NODE_ENV=development node_modules/react-scripts/bin/react-scripts.js start",
+    "build": "node_modules/react-scripts/bin/react-scripts.js build"
   },
   "author": "Artur Linnik",
   "license": "ISC",
